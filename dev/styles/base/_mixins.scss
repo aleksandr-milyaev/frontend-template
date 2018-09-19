@@ -1,0 +1,17 @@
+@mixin ff($fontName, $fileName) {
+	@font-face {
+		font-family: "#{$fontName}";
+		src: url("../fonts/#{$fileName}.woff") format("woff"),
+			url("../fonts/#{$fileName}.woff2") format("woff2");
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+	&::-moz-placeholder {opacity: 1; @content}
+	&:-ms-input-placeholder {@content}
+	&.placeholder {@content}
+}
+
